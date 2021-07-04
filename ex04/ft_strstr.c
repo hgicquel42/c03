@@ -11,12 +11,15 @@
 /* ************************************************************************** */
 
 // #include <stdio.h>
+// #include <strings.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	j;
 
+	if (!to_find[0])
+		return (str);
 	i = 0;
 	while (str[i])
 	{
@@ -36,6 +39,6 @@ char	*ft_strstr(char *str, char *to_find)
 // {
 // 	char	str[] = "hello world";
 
-// 	char	*found = ft_strstr(str, "d");
-// 	printf("%s\n", found);
+// 	printf("%s\n", ft_strstr(str, "aaa"));
+// 	printf("%s\n", strstr(str, "aaa"));
 // }
