@@ -41,10 +41,11 @@ char	*ft_strcat(char *dest, char *src)
 
 // int	main(void)
 // {
-// 	char	dest[16] = "hello";
+// 	char	dest1[] = "hello";
+// 	char	dest2[] = "hello";
 // 	char	src[] = " world";
 
-// 	ft_strcat(dest, src);
-// 	printf("%s", dest);
+// 	printf("%s\n", ft_strcat(dest1, src));
+// 	printf("%s\n", ft_strcat(dest2, src));
 // 	return (0);
 // }
