@@ -19,31 +19,18 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	i;
 
 	l = 0;
-	while (dest[l])
+	while (dest[l] && l < size)
 		l++;
 	i = 0;
-	while (l + i < size - 1)
+	while (src[i] && size && l + i < size - 1)
 	{
 		dest[l + i] = src[i];
 		i++;
 	}
-	if (size)
+	if (l < size)
 		dest[l + i] = '\0';
 	i = 0;
-	while (dest[i])
+	while (src[i])
 		i++;
 	return (l + i);
 }
-
-// int main(void)
-// {
-//     char    dest1[] = "hello";
-//     char    dest2[] = "hello";
-//     char    src[] = "";
-
-//     int n1 = ft_strlcat(dest1, src, 12);
-//     printf("%s %d\n", dest1, n1);
-//     int n2 = ft_strlcat(dest2, src, 12);
-//     printf("%s %d\n", dest2, n2);
-//     return (0);
-// }
