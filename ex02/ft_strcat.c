@@ -10,32 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
-
 char	*ft_strcat(char *dest, char *src)
 {
-	char	c;
-	int		i;
-	int		l;
+	unsigned int	i;
+	unsigned int	l;
 
+	l = 0;
+	while (dest[l])
+		l++;
 	i = 0;
-	while (1)
+	while (src[i])
 	{
-		c = dest[i];
-		if (c == '\0')
-			break ;
+		dest[l] = src[i];
+		l++;
 		i++;
 	}
-	l = i;
-	i = 0;
-	while (1)
-	{
-		c = src[i];
-		dest[l + i] = c;
-		if (c == '\0')
-			break ;
-		i++;
-	}
+	dest[l] = '\0';
 	return (dest);
 }

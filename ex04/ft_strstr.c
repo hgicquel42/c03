@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <strings.h>
-
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
@@ -34,11 +31,3 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	str[] = "hello world";
-
-// 	printf("%s\n", ft_strstr(str, "aaa"));
-// 	printf("%s\n", strstr(str, "aaa"));
-// }
