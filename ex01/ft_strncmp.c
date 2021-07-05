@@ -11,35 +11,16 @@
 /* ************************************************************************** */
 
 // #include <stdio.h>
-// #include <strings.h>
+// #include <string.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char			c1;
-	char			c2;
 	unsigned int	i;
 
 	i = 0;
-	while (1)
-	{
-		if (i == n)
-			return (0);
-		c1 = s1[i];
-		c2 = s2[i];
-		if (c1 == '\0')
-			return (0);
-		if (c1 != c2)
-			return (c1 - c2);
+	if (!n)
+		return (0);
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
 		i++;
-	}
+	return (s1[i] - s2[i]);
 }
-
-// int main(void)
-// {
-//     char    s1[] = "hella";
-//     char    s2[] = "hello";
-
-//     printf("%d\n", ft_strncmp(s1, s2, 6));
-// 	printf("%d\n", strncmp(s1, s2, 6));
-//     return (0);
-// }

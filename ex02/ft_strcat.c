@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 // #include <stdio.h>
+// #include <string.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -38,14 +39,3 @@ char	*ft_strcat(char *dest, char *src)
 	}
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	dest1[] = "hello";
-// 	char	dest2[] = "hello";
-// 	char	src[] = " world";
-
-// 	printf("%s\n", ft_strcat(dest1, src));
-// 	printf("%s\n", ft_strcat(dest2, src));
-// 	return (0);
-// }
